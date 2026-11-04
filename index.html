@@ -30,6 +30,15 @@
     var url = APPS[m[1]] + '://' + m[2];
     document.getElementById('open').href = url;
     location.replace(url);
+    // Then close this tab. Browsers allow that for a tab opened from a link with nothing before it;
+    // if this one won't close, say so instead.
+    setTimeout(function () {
+      window.close();
+      setTimeout(function () {
+        document.querySelector('h1').textContent = 'Opened in the app';
+        document.querySelector('p').textContent = 'You can close this tab.';
+      }, 300);
+    }, 1500);
   }());
 </script>
 </body>
