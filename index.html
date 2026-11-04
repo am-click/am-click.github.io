@@ -23,7 +23,7 @@
   // Links look like https://am-click.github.io/#<app>/<what>?… : the part after # names the app to open and what to show.
   // It stays in this browser: it is never sent to GitHub, so campaign and Ad names stay private.
   // To add an app, add its name and link scheme here (the Dev apps have their own).
-  var APPS = { 'ad-studio': 'adstudio', 'ad-studio-dev': 'adstudio-dev' };
+  var APPS = { 'ad-studio': 'adstudio', 'ad-studio-dev': 'adstudio-dev', 'campaign-planner': 'campaignplanner', 'campaign-planner-dev': 'campaignplanner-dev' };
   (function () {
     var m = location.hash.slice(1).match(/^([a-z-]+)\/(.+)$/);
     if (!m || !APPS[m[1]]) return;
